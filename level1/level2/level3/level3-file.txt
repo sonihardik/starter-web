@@ -1,0 +1,19 @@
+nroll)
+int checkIfPtEnrolledInProgram(Root oRootCon, int nPtId , int nProgramId)
+int checkIfPtEnrolledInProgramForExpiredIncompleteCert(Root oRootCon, int nPtId , int nProgramId, int certId)
+JSONObject getFacilityIdForPcp(Root oRootCon, int nPcpId, JSONObject json)
+String associateCertificationICD(Root oRootCon, JSONObject jsonObjectData, int cpoCertificationKey)
+String reassociateCertificationICD(Root oRootCon, JSONObject jsonObjectData, int cpoCertificationKey)
+String disassociateCertificationICD(Root oRootCon, JSONObject jsonObjectData, int cpoCertificationKey)
+String updateCertificationICD(Root oRootCon, JSONArray associateIcd, int cpoCertificationKey,String strCurrentDtTime, String query, Boolean delflag, String strAssocType)
+String getCPOAgencyList(Root oRootCon, String strLookupParam)
+String getCPOAgencyDetailsById(Root oRootCon, int agencyId)
+String getCPOAgencyContact(Root oRootCon, int agencyId)
+String checkIfSelectedProviderIneligible(Root oRootCon, int providerId, int agencyId)
+CpoAddTime :
+     Methods :
+String getCpoServices(Root oRootCon)
+int saveCPOServiceDurations(Root oRootCon, String strFrontEndData)
+CpoEndEpisode :
+     Methods :
+String endEpisode(Root oRootCon, int nPtId, int nCertId, int nUid, int nCreateClaim, St

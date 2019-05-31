@@ -16,3 +16,36 @@ eCW Interpretation for billing with cpt-99491:
 
       - At the time of billing (running ccm batch) , system should be able to identify if patient is  deemed eligible for billing with which all CCM cpt code as  per the clinical staff time and professional time captured.
 
+w Added Classes : 
+CPOAdminProgram : 
+     Methods :
+String getConcentFolderList(Root oRootCon)
+int getProgramId(Root oRootCon, String strModuleName)
+String getNonBillableCptCodes(Root oRootCon)
+String saveGeneralSettingData(Root oRootCon, int strFolderCatId, String strFolderName, int expiryAlertNumberOfDays, JSONArray billableCptCodes)
+String getInsuranceData(Root oRootCon,int maxCount,int pageNo,int selectedInsuranceId)
+int getTotalInsuranceData(Root oRootCon,int selectedInsuranceId)
+String editCertificateOrMedicare(int cpoProgramId, int updateData, Root oRootCon, String updateCondition)
+String updateMultipleInsurances(JSONArray modelNames,int multipleSaveMedicare,int multipleSaveCertificate,Root oRootCon)
+String deleteSingleInsuranceRecord(int deleteSingleDataTableId,Root oRootCon)
+String deleteMultipleInsuranceRecord(JSONArray modelNames,Root oRootCon)
+String getInsuranceList(Root oRootCon,String insuranceStartLetter)
+String addInsuranceData(Root oRootCon, int insuranceId)
+String checkIfInsuranceExist(Root oRootCon, int insuranceId)
+String getStoredConentNotes(Root oRootCon)
+String getIneligibleProviderAgency(Root oRootCon, String strLookup)
+String getProviderList(Root oRootCon, String providerName)
+String saveIneligibleProviderData(Root oRootCon, int agencyId, int providerId, int uid)
+String validateProviderEntry(Root oRootCon, int providerId, int agencyId)
+String getSelectedProviderList(Root oRootCon ,int maxCount,int pageNo)
+String removeSelectedProvider(Root oRootCon, int cpoIneligibleProvidersTableId)
+String getAvailableCpoServices(Root oRootCon)
+String addNewCpoService(Root oRootCon, JSONObject jsonFrontEndData)
+String deleteCpoService(Root oRootCon, int serviceId)
+String updateCpoService(Root oRootCon, JSONObject jsonFrontEndData)
+String saveCpoAddTimeServiceDetails(Root oRootCon, String strFrontEndData)
+String getRemindCpoReCertification(Root oRootCon)
+String getBillableCptCodes(Root oRootCon)
+ * CPO User facing screens :
+Path : Left Panel -> PHM -> CPO
+There will be three tabs.

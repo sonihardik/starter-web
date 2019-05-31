@@ -1,0 +1,18 @@
+Chronic care management services, provided personally by a physician or other qualified health care professional, at least 30 minutes of physician or other qualified health care professional time, per calendar month, with the following required elements: multiple (two or more) chronic conditions expected to last at least 12 months, or until the death of the patient, chronic conditions place the patient at significant risk of death, acute exacerbation/decompensation, or functional decline; comprehensive care plan established, implemented, revised, or monitored
+
+eCW Interpretation for billing with cpt-99491:
+
+ -  To bill Medicare with cpt code 99491 , the billing provider of the patient should have personally provided 30 min or more of ccm services in the given calendar month .
+
+- Physicians and the following health care professionals can bill for CCM services: Physician Assistants, Clinical Nurse Specialists, Nurse Practitioners, and Certified Nurse Midwives.  .In eClinicalWorks application physicians and other healthcare professionals listed above are added as providers.
+
+
+
+2.0  Functional requirements
+
+      - System should be able to segregate the CCM time captured by physician or other health care professionals  and staff.
+
+       - System should allow users to define/change the priority of new cpt code with respect to other CCM/CPO cpt codes
+
+      - At the time of billing (running ccm batch) , system should be able to identify if patient is  deemed eligible for billing with which all CCM cpt code as  per the clinical staff time and professional time captured.
+

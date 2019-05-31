@@ -49,3 +49,22 @@ String getBillableCptCodes(Root oRootCon)
  * CPO User facing screens :
 Path : Left Panel -> PHM -> CPO
 There will be three tabs.
+
+
+- When the batch is run, system should identify the billing provider of a patient . If billing provider of the patient has provided CCM services for >= 30 min ( Professional time of billing provider) then 'Suggested CPT'  for the patient would include CCM 99491 and CCM 99490  along with Do not create claim.
+
+   - Based on priority set in admin section the selected option in 'Suggested CPT' would be 99491 or 99490.
+
+   - If Professional Time added/captured by billing provider is < 30 min, system will look at the clinical staff time to determine 'Suggested Code' for the patient. Based on the clinical staff time captured the 'suggested code'  will work as today.
+
+  -  Per patient only one CCM claim can be created with eligible cpt code in a given calendar month
+
+   - CCM claim with professional cpt code(99491) cannot be billed with any other cpt code.
+   
+   
+   
+      - System should be able to segregate the CCM time captured by physician or other health care professionals  and staff.
+
+       - System should allow users to define/change the priority of new cpt code with respect to other CCM/CPO cpt codes
+
+      - At the time of billing (running ccm batch) , system should be able to identify if patient is  deemed eligible for billing with which all CCM cpt code as  per the clinical staff time and professional time captured.
